@@ -25,7 +25,7 @@ public class HelloWorld
             }
 
         }
-        System.out.println("----------------");
+        System.out.println("----------");
         System.out.println(arr[N-1]);
         System.out.println(arr[N-2]);
 	}
