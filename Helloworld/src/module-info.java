@@ -5,29 +5,27 @@ public class HelloWorld
 
 	public static void main(String[] args)
 	{
-	    int N = 0;
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter the value for N:");
-        N = scanner.nextInt();
-        int arr[] = new int[N];
-        for (int k = 0; k < N; k++) {
-            System.out.println("The array elements are:");
-            arr[k] = scanner.nextInt();
-        }
+		   Scanner scanner = new Scanner(System.in);
+	        int t = scanner.nextInt();
+	        while (t-- > 0) {
+	            int n = scanner.nextInt();
+	            int a[] = new int[n];
+	            int b[] = new int[n];
+	           int count =0;
+	            for (int j = 0; j < n; j++) {
+	                a[j] = scanner.nextInt();
+	            }
+	            for (int k = 0; k < n; k++) {
+	                b[k] = scanner.nextInt();
+	            }
+	            for (int i = 0; i < n; i++) {
+	                if (a[i] <=2*b[i] && b[i]<=2*a[i]) {
+	                    count=count+1;
+	                }
+	            }
+	            System.out.println("the day both were happy are"+count);
 
-        for (int i = 0; i < N; i++) {
-            for (int j = 0; j < N - i - 1; j++) {
-                if (arr[j] > arr[j + 1]) {
-                    int temp = arr[j];
-                    arr[j] = arr[j + 1];
-                    arr[j + 1] = temp;
-                }
-            }
-
-        }
-        System.out.println("----------------");
-        System.out.println(arr[N-1]);
-        System.out.println(arr[N-2]);
+	        }
 	}
 
 }
